@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-
+//servlet 만들고 datas만들고 product_register 만들고
 // http://localhost:8080/servlet_study/product/register (GET)
 @WebServlet("/product/register")
 public class ProductRegisterPageServlet extends HttpServlet {
@@ -21,4 +21,6 @@ public class ProductRegisterPageServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         super.doPost(req, resp);
     }
+
+
 }
