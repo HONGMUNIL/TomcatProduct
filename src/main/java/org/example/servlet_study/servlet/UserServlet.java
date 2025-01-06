@@ -1,5 +1,7 @@
 package org.example.servlet_study.servlet;
 
+
+
 import org.example.servlet_study.entity.User;
 
 import javax.servlet.ServletConfig;
@@ -12,51 +14,56 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 @WebServlet("/user")
 public class UserServlet extends HttpServlet {
-    @Override
+
     public void init(ServletConfig config) throws ServletException {
         List<User> users = new ArrayList<>();
-        users.add(new User("aaa", "1111", "aaaaaa", "aaa@email.com"));
-        users.add(new User("bb", "22", "b", "bb@email.com"));
-        users.add(new User("ccc", "1331", "ccc", "cc@email.com"));
-        users.add(new User("dddd", "444", "dd", "dd@email.com"));
-        users.add(new User("eee", "5551", "ee", "ee@email.com"));
+        users.add(new User("aaa", "1111", "aaaaaa", "aaa@gmail.com"));
+        users.add(new User("bbb", "1111", "bbbbbb", "bbb@gmail.com"));
+        users.add(new User("ccc", "1111", "cccccc", "ccc@gmail.com"));
+        users.add(new User("ddd", "1111", "dddddd", "ddd@gmail.com"));
+        users.add(new User("eee", "1111", "eeeeee", "eee@gmail.com"));
+
         config.getServletContext().setAttribute("users", users);
-
     }
 
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String searchValue = req.getParameter("searchValue");
-        ServletContext servletContext = req.getServletContext();
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String searchValue = request.getParameter("searchValue");
+        ServletContext servletContext = request.getServletContext();
         List<User> users = (List<User>) servletContext.getAttribute("users");
+
+        if(searchValue != null) {
+            if(!searchValue.isBlank()) {
+                request.setAttribute("users", users.stream().filter(user -> user.getUsername().contains(searchValue)).collect(Collectors.toList()));
+            }
+        }
+        request.getRequestDispatcher("/WEB-INF/user.jsp").forward(request, response);
     }
 
-
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String username = req.getParameter("username");
-        String password = req.getParameter("password");
-        String name = req.getParameter("name");
-        String email = req.getParameter("email");
-
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         User user = User.builder()
-                .username(req.getParameter("username"))
-                .password(req.getParameter("password"))
-                .name(req.getParameter("name"))
-                .email(req.getParameter("email"))
+                .username(request.getParameter("username"))
+                .password(request.getParameter("password"))
+                .name(request.getParameter("name"))
+                .email(request.getParameter("email"))
                 .build();
 
-        ServletContext servletContext = req.getServletContext();
+        ServletContext servletContext = request.getServletContext();
         List<User> users = (List<User>) servletContext.getAttribute("users");
-
-
+        if(users.stream().filter(u -> u.getUsername().equals(user.getUsername())).collect(Collectors.toList()).size() > 0) {
+            response.setContentType("text/html");
+            response.getWriter().println("<script>" +
+                    "alert('이미 존재하는 사용자 이름입니다.');" +
+                    "history.back();" +
+                    "</script>");
+            return;
+        }
         users.add(user);
 
-        resp.sendRedirect("http://localhost:8080/servlet_study_war/user");
+        response.sendRedirect("http://localhost:8080/servlet_study_war/user");
     }
 }
