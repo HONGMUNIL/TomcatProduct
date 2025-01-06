@@ -34,14 +34,8 @@ public class UserServlet extends HttpServlet {
         String searchValue = req.getParameter("searchValue");
         ServletContext servletContext = req.getServletContext();
         List<User> users = (List<User>) servletContext.getAttribute("users");
-
-        if(searchValue != null) {
-            if(searchValue.isBlank()) {
-                req.setAttribute("users", users.stream().filter(user ->user.get("username").toString()));
-            }
-        }
-        req.getRequestDispatcher("/WEB-INF/jsp/user.jsp").forward(req, resp);
     }
+
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -59,6 +53,8 @@ public class UserServlet extends HttpServlet {
 
         ServletContext servletContext = req.getServletContext();
         List<User> users = (List<User>) servletContext.getAttribute("users");
+
+
         users.add(user);
 
         resp.sendRedirect("http://localhost:8080/servlet_study_war/user");
