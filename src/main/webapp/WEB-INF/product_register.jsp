@@ -25,7 +25,7 @@
                 <select name="category" id="">
                     <%--
                             [EL] 표현식:
-                            el 표현식은 라이브러리 필요, 저장소에 저장된 데이터를 불러올때 사용, 결국 getAttribute를 하는것
+                            el 표현식은 라이브러리(JSTL) 필요, 저장소에 저장된 데이터를 불러올때 사용, 결국 getAttribute를 하는것
                             사용 방식: ${}
                             EL 표현식을 사용할 수 있는 경우
                             1. Attribute에 포함되어있는 값(Application, Session, Request)
@@ -55,18 +55,25 @@
                 </select>
             </td>
         </tr>
+
+
         <tr>
             <td>상품명</td>
             <td><input type="text" name="productName"></td>
         </tr>
+
+
         <tr>
             <td>가격</td>
             <td><input type="text" name="price"></td>
         </tr>
+
+
         <tr>
             <td>등록일자</td>
             <td><input type="date" name="registerDate"></td>
         </tr>
+
     </table>
     <button type="submit">저장</button>
 </form>

@@ -1,0 +1,10 @@
+sevlet 에러
+1. 서버를 끈다
+2. File -> Close Project
+3. project 폴더로 이동
+4. 해당 프로젝트안의 .idea폴더 , target 폴더 삭제
+5. 다시 프로젝트 열기
+6. 우측 토끼모양 메이븐 clean, 메이븐 install 순서대로 더블클릭 실행
+7. 상단 current File탭에 edit config~~
+8. +버튼 누르고 톰캣서버에 local클릭 후
+9. Deployment 탭에 +버튼 Atifact 프로젝트클릭

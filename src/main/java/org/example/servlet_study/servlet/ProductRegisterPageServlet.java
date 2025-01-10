@@ -45,9 +45,12 @@ public class ProductRegisterPageServlet extends HttpServlet {
         req.getRequestDispatcher("/WEB-INF/product_register.jsp").forward(req, resp);
     }
 
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
+
+
 
         System.out.println(req.getParameter("category"));
         System.out.println(req.getParameter("productName"));
