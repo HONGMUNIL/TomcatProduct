@@ -28,6 +28,9 @@ public class UserServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String searchValue = request.getParameter("searchValue");
+
+        request.setAttribute("users", userService.getAllUsers(searchValue));
 
         request.getRequestDispatcher("/WEB-INF/user.jsp").forward(request, response);
     }

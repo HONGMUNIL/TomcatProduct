@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 @Builder
-//DB랑 같게 만들어줘야한다 entity는 하지만 자바는 카멜표기법
+//entity는 DB랑 같게 만들어줘야한다  하지만 자바는 카멜표기법이니 주의
 public class User {
     private int userId;
     private String username;
