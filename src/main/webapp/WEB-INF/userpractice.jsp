@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: user
@@ -17,6 +18,7 @@
     <tr>
       <td>username</td>
       <td><input type="text" name="username" required></td>
+      <td>password</td>
       <td><input type="text" name="password" required></td>
     </tr>
 
@@ -28,5 +30,28 @@
       <td><input type="text" name="email" required></td>
     </tr>
   </table>
+<button>추가</button>
+
+<form action="" method="get">
+  <input type="text" name="searchValue">
+  <button type="submit">조회</button>
+</form>
+
+<table>
+  <tr>
+    <th>username</th>
+    <th>password</th>
+    <th>name</th>
+    <th>email</th>
+  </tr>
+  <c:forEach var="user" items="${users}">
+    <tr>
+      <td>${user.username}</td>
+      <td>${user.password}</td>
+      <td>${user.name}</td>
+      <td>${user.email}</td>
+    </tr>
+  </c:forEach>
+</table>
 </body>
 </html>
