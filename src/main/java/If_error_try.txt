@@ -9,3 +9,8 @@ sevlet 에러
 8. +버튼 누르고 톰캣서버에 local클릭 후
 9. Deployment 탭에 +버튼 Atifact 프로젝트클릭
 10. 다시 server 탭에 VM option에 -Dfile.encoding=UTF-8 입력
+
+
+
+
+
