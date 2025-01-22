@@ -25,9 +25,9 @@ public class BoardService {
     public ResponseDto<?> insertBoard(InsertBoardDto dto) {
         Board board = dto.toBoard();
        Board insertedBoard = boardDao.save(board);
-    if(insertedBoard != null) {
-
+    if(insertedBoard == null) {
+        return ResponseDto.fail("게시글 작성실패!");
     }
-    return;
+    return ResponseDto.success(insertedBoard);
     }
 }

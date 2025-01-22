@@ -2,6 +2,7 @@ package org.example.servlet_study.servlet;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.servlet_study.dto.InsertBoardDto;
+import org.example.servlet_study.dto.ResponseDto;
 import org.example.servlet_study.service.BoardService;
 
 import javax.servlet.ServletException;
@@ -22,11 +23,11 @@ public class BoardRestServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         StringBuilder stringBuilder = new StringBuilder(); //문자열 합쳐줌
 
-        try (BufferedReader bufferedReader = req.getReader()) {
+        try (BufferedReader bufferedReader = request.getReader()) {
             String line;
             while ((line = bufferedReader.readLine()) != null) {
                 stringBuilder.append(line);
@@ -34,8 +35,12 @@ public class BoardRestServlet extends HttpServlet {
         }
         ObjectMapper objectMapper = new ObjectMapper();
         InsertBoardDto insertBoardDto = objectMapper.readValue(stringBuilder.toString(), InsertBoardDto.class);
-        System.out.println(insertBoardDto);
 
+        ResponseDto<?> responseDto = boardService.insertBoard(insertBoardDto);
+        String responseJson = objectMapper.writeValueAsString(responseDto);
+        responseDto.setStatus(responseDto.getStatus());
+        response.setContentType("application/json");
+        response.getWriter().println(responseJson);
 
 
 

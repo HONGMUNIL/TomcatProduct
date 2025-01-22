@@ -10,10 +10,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5ae05ef-e03d-4886-a5d1-2f11d9975067" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/dto/ResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/dao/AuthDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/dao/PracticeUserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/dto/PracticeSigninDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/dto/PracticeSignupDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/dto/SigninDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/dto/SignupDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/entity/PracticeUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/security/jwt/JwtProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/service/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/service/PracticeUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/PracticeSigninRestServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/PracticeSignupRestServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/SigninRestServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/SignupRestServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/dao/BoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/dao/BoardDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/service/BoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/BoardRestServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/BoardRestServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +58,9 @@
         <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -191,12 +208,32 @@
       <workItem from="1736489660783" duration="7616000" />
       <workItem from="1737097619857" duration="7536000" />
       <workItem from="1737332824939" duration="9279000" />
-      <workItem from="1737418319637" duration="19526000" />
+      <workItem from="1737418319637" duration="49032000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/UserRestServlet.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/servlet_study/dao/PracticeUserDao.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.sql.SQLException" package="java.sql" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
