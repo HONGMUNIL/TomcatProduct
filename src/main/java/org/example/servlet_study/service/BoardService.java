@@ -3,6 +3,7 @@ package org.example.servlet_study.service;
 import lombok.Builder;
 import org.example.servlet_study.dao.BoardDao;
 import org.example.servlet_study.dto.InsertBoardDto;
+import org.example.servlet_study.dto.ResponseDto;
 import org.example.servlet_study.entity.Board;
 
 public class BoardService {
@@ -21,9 +22,12 @@ public class BoardService {
         }
         return instance;
     }
-    public void insertBoard(InsertBoardDto dto) {
+    public ResponseDto<?> insertBoard(InsertBoardDto dto) {
         Board board = dto.toBoard();
-        boardDao.save(board);
+       Board insertedBoard = boardDao.save(board);
+    if(insertedBoard != null) {
 
+    }
+    return;
     }
 }
