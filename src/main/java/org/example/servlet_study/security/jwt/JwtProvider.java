@@ -1,5 +1,6 @@
 package org.example.servlet_study.security.jwt;
 
+import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwt;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -40,4 +41,23 @@ public class JwtProvider {
                 .compact();
     }
 
+
+    public Claims parseToken(String token) {
+
+        Claims claims = null;
+        //토큰이 유효기간이 지나거나 틀렸거나 했을때 예외가발생하니 try로 감싸준다
+        try {
+            claims = Jwts.parserBuilder()
+                    .setSigningKey(key)
+                    .build()
+                    .parseClaimsJws(token)
+                    .getBody();
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        return claims;
+    }
+    private String removeBearer(String bearerToken) {
+
+    }
 }

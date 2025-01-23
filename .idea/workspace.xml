@@ -10,24 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5ae05ef-e03d-4886-a5d1-2f11d9975067" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/dao/AuthDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/dao/PracticeUserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/dto/PracticeSigninDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/dto/PracticeSignupDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/dto/SigninDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/dto/SignupDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/entity/PracticeUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/security/jwt/JwtProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/service/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/service/PracticeUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/PracticeSigninRestServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/PracticeSignupRestServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/SigninRestServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/SignupRestServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/dto/PracticeResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/AuthenticatedServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/service/BoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/BoardRestServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/BoardRestServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/dao/AuthDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/dao/AuthDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/dto/ResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/dto/ResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/security/jwt/JwtProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/security/jwt/JwtProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/service/PracticeUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/service/PracticeUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/PracticeSigninRestServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/PracticeSigninRestServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/PracticeSignupRestServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/PracticeSignupRestServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +102,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="d7fa3019-3654-4058-977f-fa4a697d72e2" />
+        <option name="BASE_DIRECTORY_NAME" value="0cb74387-4c18-4e87-abb6-c83b94f8ee46" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -119,7 +110,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="51759" />
+        <option name="DEBUG_PORT" value="50393" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -208,7 +199,7 @@
       <workItem from="1736489660783" duration="7616000" />
       <workItem from="1737097619857" duration="7536000" />
       <workItem from="1737332824939" duration="9279000" />
-      <workItem from="1737418319637" duration="49032000" />
+      <workItem from="1737418319637" duration="56235000" />
     </task>
     <servers />
   </component>
@@ -226,7 +217,7 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/servlet_study/dao/PracticeUserDao.java</url>
           <line>32</line>
-          <option name="timeStamp" value="3" />
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.sql.SQLException" package="java.sql" />

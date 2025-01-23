@@ -39,7 +39,7 @@ public class AuthDao {
                         user_id,
                         username,
                         password,
-                          name,
+                        name,
                         email
                     from
                         user_tb
