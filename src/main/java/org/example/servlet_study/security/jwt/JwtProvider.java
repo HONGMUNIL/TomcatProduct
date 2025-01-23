@@ -50,14 +50,20 @@ public class JwtProvider {
             claims = Jwts.parserBuilder()
                     .setSigningKey(key)
                     .build()
-                    .parseClaimsJws(token)
+                    .parseClaimsJws(removeBearer(token))
                     .getBody();
         }catch (Exception e) {
             e.printStackTrace();
         }
         return claims;
     }
-    private String removeBearer(String bearerToken) {
 
+    private String removeBearer(String bearerToken) {
+        String accessToken = null;
+        final String BEARER_KEYWORD = "Bearer ";
+        if(bearerToken.startsWith(BEARER_KEYWORD)) {
+        }
+        accessToken = bearerToken.substring(BEARER_KEYWORD.length());
+        return accessToken;
     }
 }

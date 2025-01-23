@@ -10,15 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5ae05ef-e03d-4886-a5d1-2f11d9975067" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/dto/PracticeResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/AuthenticatedServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/dao/AuthDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/dao/AuthDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/dto/ResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/dto/ResponseDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/security/jwt/JwtProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/security/jwt/JwtProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/service/PracticeUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/service/PracticeUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/PracticeSigninRestServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/PracticeSigninRestServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/PracticeSignupRestServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/PracticeSignupRestServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/AuthenticatedServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/AuthenticatedServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +193,7 @@
       <workItem from="1736489660783" duration="7616000" />
       <workItem from="1737097619857" duration="7536000" />
       <workItem from="1737332824939" duration="9279000" />
-      <workItem from="1737418319637" duration="56235000" />
+      <workItem from="1737418319637" duration="62646000" />
     </task>
     <servers />
   </component>
