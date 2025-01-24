@@ -30,13 +30,13 @@ public class JwtProvider {
     }
 
     private Date getExpireDate() {
-        return new Date(new Date().getTime() + (1000l * 60 * 60 * 24 * 365));
+        return new Date(new Date().getTime() + (1000l * 60 * 60 * 24 * 365));//1년 설정출처
     }
 
     public String generateToken(User user) {
         return Jwts.builder()
                 .claim("userId", user.getUserId())
-                .setExpiration(getExpireDate())
+                .setExpiration(getExpireDate()) //로그인 1년 지정(학습할때 계속 로그인해야하기떄문에)
                 .signWith(key, SignatureAlgorithm.HS256)
                 .compact();
     }
@@ -48,9 +48,9 @@ public class JwtProvider {
         //토큰이 유효기간이 지나거나 틀렸거나 했을때 예외가발생하니 try로 감싸준다
         try {
             claims = Jwts.parserBuilder()
-                    .setSigningKey(key)
+                    .setSigningKey(key) //키가 위조이거나
                     .build()
-                    .parseClaimsJws(removeBearer(token))
+                    .parseClaimsJws(removeBearer(token)) //만료 되었을떄
                     .getBody();
         }catch (Exception e) {
             e.printStackTrace();

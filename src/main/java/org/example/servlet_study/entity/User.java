@@ -1,6 +1,7 @@
 package org.example.servlet_study.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,6 +15,7 @@ import lombok.NoArgsConstructor;
 public class User {
     private int userId;
     private String username;
+    @JsonIgnore //패스워드를 응답해줄수 없으니 설정
     private String password;
     private String name;
     private String email;
