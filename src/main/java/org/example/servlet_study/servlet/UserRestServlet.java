@@ -3,6 +3,7 @@ package org.example.servlet_study.servlet;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.servlet_study.dto.ResponseDto;
 import org.example.servlet_study.entity.User;
+import org.example.servlet_study.security.annotation.JwtValid;
 import org.example.servlet_study.service.UserService;
 
 import javax.servlet.ServletException;
@@ -18,6 +19,8 @@ public class UserRestServlet extends HttpServlet {
     public UserRestServlet() {
         userservice = UserService.getInstance();
     }
+
+    @JwtValid//인증필요하면 다는 어노테이션
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String userIdParam = request.getParameter("userId");
@@ -33,8 +36,8 @@ public class UserRestServlet extends HttpServlet {
 //        response.setHeader("Access-Control-Allow-Headers", "Content-Type");
 //        response.setHeader("Access-Control-Allow-Credentials", "true");
 //
-//        response.setContentType("apllication/json");
-//        response.getWriter().write(jsonUser);
+        response.setContentType("application/json");
+        response.getWriter().write(jsonUser);
     }
 
     @Override
