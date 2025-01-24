@@ -69,14 +69,14 @@ public class AuthenticationFilter implements Filter {
         return foundMethod != null;
     }
 
-        private Method getMappedMethod(Class<?> clazz, String methodName) {
-            for(Method method : clazz.getDeclaredMethods()) {
-                if(method.getName().toLowerCase().endsWith(methodName.toLowerCase()) && method.isAnnotationPresent(JwtValid.class)) {
-                    return method;
-                }
+    private Method getMappedMethod(Class<?> clazz, String methodName) {
+        for(Method method : clazz.getDeclaredMethods()) {
+            if(method.getName().toLowerCase().endsWith(methodName.toLowerCase()) && method.isAnnotationPresent(JwtValid.class)) {
+                return method;
             }
-            return null;
         }
+        return null;
+    }
 
     private void setUnAuthenticatedResponse(HttpServletResponse response) throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
@@ -87,11 +87,4 @@ public class AuthenticationFilter implements Filter {
     }
 
 }
-
-
-
-
-
-
-
 

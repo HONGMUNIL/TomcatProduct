@@ -10,16 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5ae05ef-e03d-4886-a5d1-2f11d9975067" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/security/annotation/JwtValid.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/filter/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/filter/AuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/filter/CorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/filter/CorsFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/filter/EncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/filter/EncodingFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/AuthenticatedServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/AuthenticatedServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/PracticeSigninRestServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/PracticeSigninRestServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/PracticeSignupRestServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/PracticeSignupRestServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/UserRestServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servlet_study/servlet/UserRestServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +192,7 @@
       <workItem from="1736489660783" duration="7616000" />
       <workItem from="1737097619857" duration="7536000" />
       <workItem from="1737332824939" duration="9279000" />
-      <workItem from="1737418319637" duration="81937000" />
+      <workItem from="1737418319637" duration="88858000" />
     </task>
     <servers />
   </component>
